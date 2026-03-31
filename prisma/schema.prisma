@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")   // Uses connection pooling for serverless environments
+  directUrl = env("POSTGRES_URL_NON_POOLING") // Direct connection for database migrations `prisma db push`
+}
+
+model Post {
+  id          String   @id @default(uuid())
+  slug        String   @unique
+  title       String
+  content     String
+  publishedAt DateTime @default(now())
+  isDraft     Boolean  @default(false)
+}
