@@ -2,7 +2,7 @@
 
 import { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { createPost, updatePost } from '@/app/actions/post';
+import { createPost, updatePost, getPostById } from '@/app/actions/post';
 
 function EditorForm() {
   const searchParams = useSearchParams();
@@ -17,10 +17,25 @@ function EditorForm() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (existingId) {
-      // In a real app we'd fetch the single post data from server via a Server Action or API. 
-      // For simplicity, we just assume new post or require manual refetch logic if needed. 
+    async function loadPost() {
+      if (existingId) {
+        setLoading(true);
+        try {
+          const post = await getPostById(existingId);
+          if (post) {
+            setTitle(post.title);
+            setSlug(post.slug);
+            setContent(post.content);
+            setIsDraft(post.isDraft);
+          }
+        } catch (err) {
+          console.error("Failed to load post:", err);
+        } finally {
+          setLoading(false);
+        }
+      }
     }
+    loadPost();
   }, [existingId]);
 
   const handleSubmit = async (e: React.FormEvent) => {

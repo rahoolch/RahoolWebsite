@@ -29,6 +29,12 @@ export async function getPostBySlug(slug: string) {
   });
 }
 
+export async function getPostById(id: string) {
+  return await prisma.post.findUnique({
+    where: { id }
+  });
+}
+
 export async function createPost(data: { title: string; slug: string; content: string; isDraft: boolean }) {
   await verifyAuth();
   const post = await prisma.post.create({
