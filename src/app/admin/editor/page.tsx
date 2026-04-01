@@ -34,8 +34,9 @@ function EditorForm() {
         await createPost({ title, slug, content, isDraft });
       }
       router.push('/admin/dashboard');
-    } catch (err) {
+    } catch (err: any) {
       console.error(err);
+      alert('Error saving post: ' + (err.message || 'Unknown server error. Check Vercel Logs.'));
       setLoading(false);
     }
   };
