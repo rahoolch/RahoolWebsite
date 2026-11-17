@@ -31,7 +31,7 @@ export default function Overlay({ scrollProgress }: OverlayProps) {
           Rahul <span className="text-white/40">Chandani.</span>
         </h1>
         <p className="text-xl md:text-2xl font-light tracking-wide uppercase text-white/80">
-          Senior Software Engineer & AI Architect
+          AI/ML Engineer · Agentic AI & GenAI
         </p>
       </motion.div>
 
@@ -53,8 +53,8 @@ export default function Overlay({ scrollProgress }: OverlayProps) {
       >
         <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-white/90">
            Bridging<br/>
-           <span className="text-white">scalable architecture</span> &<br/>
-           <span className="text-white">applied AI</span>.
+           <span className="text-white">multi-agent LLMs</span> &<br/>
+           <span className="text-white">real-time ML</span>.
         </h2>
         <div className="w-12 h-[2px] bg-white/50 ml-auto mt-6" />
       </motion.div>
