@@ -19,7 +19,7 @@ export default function Projects() {
   }, [currentIndex]);
 
   return (
-    <section id="projects" className="bg-[#0a0a0a] min-h-screen py-32 px-6 md:px-24 rounded-t-[3rem] -mt-10 relative z-20 shadow-[0_-20px_50px_rgba(0,0,0,0.5)]">
+    <section id="projects" className="bg-[#0a0a0a] py-16 px-6 md:px-24 relative z-20">
       <div className="max-w-7xl mx-auto flex flex-col justify-center min-h-[70vh]">
         <motion.div
            initial={{ opacity: 0, y: 50 }}

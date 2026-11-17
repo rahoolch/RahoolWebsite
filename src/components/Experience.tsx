@@ -74,7 +74,7 @@ const fadeUp = {
 
 export default function Experience() {
   return (
-    <section id="experience" className="bg-[#0a0a0a] py-24 px-6 md:px-24 relative z-20 border-t border-white/5">
+    <section id="experience" className="bg-[#0a0a0a] pt-32 pb-8 px-6 md:px-24 rounded-t-[3rem] -mt-10 relative z-20 shadow-[0_-20px_50px_rgba(0,0,0,0.5)]">
       <div className="max-w-7xl mx-auto">
         {/* Summary */}
         <motion.div {...fadeUp} className="mb-24 max-w-4xl">
@@ -129,8 +129,15 @@ export default function Experience() {
             </motion.div>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
 
-        {/* Education */}
+export function Education() {
+  return (
+    <section id="education" className="bg-[#0a0a0a] pb-24 px-6 md:px-24 relative z-20">
+      <div className="max-w-7xl mx-auto">
         <motion.div {...fadeUp} className="rounded-3xl bg-gradient-to-r from-blue-500/10 to-emerald-500/10 border border-white/10 p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <p className="text-emerald-400 text-sm font-medium uppercase tracking-[0.2em] mb-2">Education</p>
