@@ -40,7 +40,7 @@ export default function Projects() {
           <div className="flex flex-col md:text-right gap-2">
             <p className="text-white/80 font-medium tracking-wide">Let's connect:</p>
             <a href="mailto:rahulccny@gmail.com" className="text-white text-xl hover:text-emerald-400 transition-colors">rahulccny@gmail.com</a>
-            <p className="text-white/50 text-sm">New York, NY</p>
+            <p className="text-white/50 text-sm">San Francisco, CA</p>
             
             <div className="flex flex-wrap gap-4 md:justify-end mt-2 items-center">
               <Link href="/blog" className="bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide transition-all border border-emerald-500/20">

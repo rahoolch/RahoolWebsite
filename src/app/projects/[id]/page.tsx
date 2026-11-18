@@ -100,7 +100,7 @@ export default async function ProjectDetails({
             <div className="mt-12 pt-8 border-t border-white/10 flex flex-col gap-6">
               <div>
                 <p className="text-white/50 text-sm mb-3">Interested in discussing this architecture?</p>
-                <a href="mailto:rahool2306@gmail.com" className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors font-medium">
+                <a href="mailto:rahulccny@gmail.com" className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors font-medium">
                   Contact Rahul 
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
